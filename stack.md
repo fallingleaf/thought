@@ -39,8 +39,4 @@
   - Plus 2 numbers in linked list (most significant first):
   instead of reverse linked list and calculate, push node values from linkedlist
   to stack to calculate.
-  - Course schedule: (topological sort) 
-
-
-
-**Question**
+  - Course schedule: (topological sort)
