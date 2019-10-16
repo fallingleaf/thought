@@ -33,6 +33,9 @@ used to find longest path, exist object or to detect cycle in graph.
 state of visited node, before trying new path.
 - For example: sudoku solver: try each empty cell with value from 1 to 9, if it
 does not solve then reset cell to empty.
+- Robot cleaning room (or mouse in maze): after trying one directions, it needs to
+go back to previous location by turning 180 degree (2 turn left), then move back,
+then turning 180 degree to have same direction.
 
 **Notes**
 
