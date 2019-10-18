@@ -37,6 +37,11 @@
   - Boundary transversal: observe that the boundary of tree includes left side,
   leaves and right side (bottom up)
 
+  - Maximum width of binary tree: how far from left most node to right most node,
+    observe that we can use level order but there're empty nodes in between at each level.
+    We can numbering each node, consider root is 1, so what number of its left and right ?
+    2 * root + 1 and 2 * root + 2.
+
 2. Recursive: assume that has result from both left and child, think about how to form final
 result from child nodes data? and which information return from child need to calculate?
 
