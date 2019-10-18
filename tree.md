@@ -23,12 +23,16 @@
 1. Transversal
   - Serialize and deserialize tree: use pre-order transverse to concat node value
   into string buffer.
+
   - BST tree iterator: same as in-oder transversal, but with condition, when
   calling next(), pop one node from stack and take right node to put all left nodes
   into stack.
+
   - Kth smallest: use in-order transversal, decrease K when process root, until
   k equal 0, return value.
-  - Right side view: use level order, at each level return right most node
+
+  - Right side view: use level order, at each level return right most node.
+
   - Vertical order
   - Boundary transversal: observe that the boundary of tree includes left side,
   leaves and right side (bottom up)
@@ -54,3 +58,11 @@ result from child nodes data? and which information return from child need to ca
   node value.
     - What to return for child: max of node value + left, node value + right,
     or node value.
+
+  - Count number of nodes in complete tree: simple way to solve it is to count
+  left and right.
+    - However, it can be optimized, given the definition of complete
+  tree, that all level are full except last level, nodes are far left.
+    - At least left or right subtree of current node is full and number
+    of nodes equal 2^height - 1.
+    - If we check left height = right height, then sub tree is full.
