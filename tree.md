@@ -18,13 +18,13 @@
 
 **Problems**
 
-- Most of tree problems involve transversing and recursively calculate all child nodes.
+- Most of tree problems involve transversal and recursively calculate all child nodes.
 
 1. Transversal
-  - Serialize and deserialize tree: use pre-order transverse to concat node value
+  - Serialize and de-serialize tree: use pre-order transverse to concatenate node value
   into string buffer.
 
-  - BST tree iterator: same as in-oder transversal, but with condition, when
+  - BST tree iterator: same as in-order transversal, but with condition, when
   calling next(), pop one node from stack and take right node to put all left nodes
   into stack.
 
@@ -41,6 +41,20 @@
     observe that we can use level order but there're empty nodes in between at each level.
     We can numbering each node, consider root is 1, so what number of its left and right ?
     2 * root + 1 and 2 * root + 2.
+
+  - Sum leaf nodes with parent link: similar idea to post order transversal,
+  use a prev pointer.
+    - If curr pointer is left or right of prev, continue move down to left or right,
+    if it's leaf, then move up
+    - If prev pointer is left child of curr, need to process to right
+    - If prev pointer is right child of curr, need to move up
+
+  - Populate next right pointer for each node:
+    - Use prev pointer to run from its parent,
+    - Use curr pointer to connect for current level, check left and right child
+     of prev is not null and connect them.
+    - Keep track of head pointer of current level, after processing all parents,
+    assign prev to head of current level.
 
 2. Recursive: assume that has result from both left and child, think about how to form final
 result from child nodes data? and which information return from child need to calculate?
