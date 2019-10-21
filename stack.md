@@ -13,6 +13,10 @@
   - Maximum sliding window: find maximum value in window K size. When we see new number
   in current window that larger than previous one, we don't need to keep previous
   number. Use double queue to store value in decreasing order.
+  - Next larger element for each element in array: brute force approach is to use
+  2 loops, => repeated work: find bigger elements process. Analyze: at index i,
+  need to compare value for all index from i + 1 => use stack to store smaller values,
+  when encounter larger value, pop smaller value out of stack and set into answer.
 
 - Use stack to store temporary data from last computation (without the need to recursive)
   - Binary tree - pre-order transversal: root -> left -> right.
