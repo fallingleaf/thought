@@ -17,6 +17,11 @@
   2 loops, => repeated work: find bigger elements process. Analyze: at index i,
   need to compare value for all index from i + 1 => use stack to store smaller values,
   when encounter larger value, pop smaller value out of stack and set into answer.
+  - Remove k digits from number to make it smallest: a greedy strategy is removing
+  previous bigger number than current number, need to compare current number to previous
+  => use stack to store previous number, edge case: e.g 4567 or 1111 => pop from stack,
+  e.g 100 and k = 1 => "00" remove head 0
+
 
 - Use stack to store temporary data from last computation (without the need to recursive)
   - Binary tree - pre-order transversal: root -> left -> right.
