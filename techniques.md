@@ -18,9 +18,23 @@ problems, or simply improve runtime of algorithms.
     char index, and use a dict to group these words. e.g 'a' -> [('apple', 0), ('ale', 0)]
     scan each char in S, look for word group in dict and increase their index as
     well as next char.
+
   2. Trapping rain water:
     - This problem can be solved by finding max from left side and right side,
     deduct to current height at each column.
     - Finding max left and right for each column is redundant, we can pre-process
     and store max left and right into array.
-  3. 
+
+  3. Maximum 3 non-overlap sub array sum of size K:
+    - Simple method is to calculate sum of size K at each index and loop to find
+    maximum sum.
+    - Observe that: mid subarray at i index, left subarray would be at most
+    i - K, third at i + K. We could pre-calculate max from left and from right for left
+    and right subarray.
+
+  4. Product array except self:
+    - Find product at each number except itself
+    - We could run 2 loops to multiply left and right part => repeated work
+    - Use 1 array to store right product up to index i
+
+**Caching Data**
