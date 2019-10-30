@@ -23,6 +23,14 @@ need to convert data to graph edges and nodes.
     - BFS: use to find shortest distance in undirected graph
     - DFS: use to detect cycle in directed graph and topological sort
 
+3. Topological sort:
+    - Use DFS with stack to store visited node
+    - Use BFS: build neighbor list and count in-degree for each node, put 0 degree
+    in queue. At each step, remove 1 node from queue, decrease in-degree count
+    for all of its neighbors, add 0 in-degree node to queue.
+      - This method can use to check if topological sort is unique, by checking
+      queue size is always 1.
+
 **Question**
 
 - Course schedule: given list of courses and their prerequisites, find other of
@@ -40,5 +48,5 @@ stop to end stop.
     2 buses share one or more stop.
     - Use this information, we can form an undirected edges for a list of buses.
     However, how to find which use to travel?
-    - Check all buses if they have start and end point. We can run BFS from buses 
+    - Check all buses if they have start and end point. We can run BFS from buses
     that have start point to buses have end point.
