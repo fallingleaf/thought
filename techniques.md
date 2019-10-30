@@ -38,3 +38,21 @@ problems, or simply improve runtime of algorithms.
     - Use 1 array to store right product up to index i
 
 **Caching Data**
+- Caching or memorize data is technique to reduce repeating work.
+- Cache processed node results when solving maximum or minimum problem to avoid
+processing this node again, usually apply for some BFS or DFS strategy.
+
+**Solve Complex Problem**
+- Break down problem into smaller, simple sub-problems
+  1. Parse Lisp Expression: expression has 3 operations: add, mult and let, we
+  can break problem into solving each operation
+    - For "add": it has 2 children e.g (add 1 10), (add 10 x), (add 1 (mul x 4))
+    can recursively evaluate each children then add them.
+    - Same for "mult" operation
+    - For "let": e.g "let x 1 y (add 5 x) (mul x y)", it has 2 pairs: x 1,
+    y (add 5 x) and final expression: (mul x y), we can evaluate value in each pair,
+    assign it to scope for solving last expression.
+    - Last issue is how to parse expression for each operation: e.g (add x (mul 3 y))
+    when we encounter operation e.g "add", parse remain token from next "space",
+    and we want sub-expression as one child, count open and close parentheses,
+    if count = 0 or space, add it as 1 child.
