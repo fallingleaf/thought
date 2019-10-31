@@ -8,12 +8,15 @@
 - [DFS](./DFS.md)
 - [BFS](./BFS.md)
 - [Dynamic Programming](./dynamic.md)
+- [Sort](./sort.md)
+- [Hash Table](./hashtable.md)
+- [Union Find](./unionfind.md)
 - [] Linkedlist
 - [] 2 pointers
 - [] Trie
 - [] Bitmap
 - [] Binary Search
-- [] Common techniques
+- [Common techniques](./techniques.md)
 
 
 **Practice problems in Java**
